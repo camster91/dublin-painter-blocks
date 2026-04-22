@@ -1,0 +1,88 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "dp/hero",
+	"title": "Hero Section",
+	"description": "Dark hero section with animated background, star badge, headline, subheadline, and dual CTAs. Matches the Arcan Painting design.",
+	"category": "dublin-painter",
+	"icon": "cover-image",
+	"keywords": ["hero", "landing", "header", "banner"],
+	"version": "1.0.0",
+	"textdomain": "dublin-painter-blocks",
+	"attributes": {
+		"badgeText": {
+			"type": "string",
+			"default": "4.9/5 from 250+ Dublin Homeowners"
+		},
+		"heading": {
+			"type": "string",
+			"default": "Top-Rated Painters in Dublin."
+		},
+		"headingAccent": {
+			"type": "string",
+			"default": "Fixed Quotes in 24h."
+		},
+		"subheading": {
+			"type": "string",
+			"default": "Don't settle for sloppy work or hidden fees. We provide flawless interior and exterior painting with premium materials, spotless clean-up, and a 2-year guarantee."
+		},
+		"ctaText": {
+			"type": "string",
+			"default": "Get a Free Quote"
+		},
+		"ctaUrl": {
+			"type": "string",
+			"default": "/get-quote"
+		},
+		"phoneText": {
+			"type": "string",
+			"default": "Call 01 234 5678"
+		},
+		"phoneNumber": {
+			"type": "string",
+			"default": "tel:+35312345678"
+		},
+		"imageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"imageId": {
+			"type": "number",
+			"default": 0
+		},
+		"benefits": {
+			"type": "array",
+			"default": [
+				{ "text": "100% Fixed Quotes — No hidden extras" },
+				{ "text": "Fully Insured & Safe Pass Certified" },
+				{ "text": "Premium Dulux & Fleetwood paints only" }
+			]
+		},
+		"floatCardIcon": {
+			"type": "string",
+			"default": "shield"
+		},
+		"floatCardTitle": {
+			"type": "string",
+			"default": "Fully Insured"
+		},
+		"floatCardSubtitle": {
+			"type": "string",
+			"default": "Serving All of Dublin"
+		},
+		"align": {
+			"type": "string",
+			"default": "full"
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": ["full"],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}
