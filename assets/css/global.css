@@ -112,3 +112,35 @@ body.dark-mode .dp-section-subheading {
 body.dark-mode .dp-badge-pill {
 	background: rgba(37, 99, 235, 0.2);
 }
+
+/* ─── Full-Width Override for Custom Blocks ─── */
+
+/* Allow dp/ blocks to break out of constrained post-content width */
+.wp-block-post-content .wp-block-dp-hero,
+.wp-block-post-content .wp-block-dp-trust-badges,
+.wp-block-post-content .wp-block-dp-service-features,
+.wp-block-post-content .wp-block-dp-testimonials,
+.wp-block-post-content .wp-block-dp-stats-bar,
+.wp-block-post-content .wp-block-dp-process-timeline,
+.wp-block-post-content .wp-block-dp-pricing,
+.wp-block-post-content .wp-block-dp-faq-accordion,
+.wp-block-post-content .wp-block-dp-cta-section,
+.wp-block-post-content .wp-block-dp-service-areas,
+.wp-block-post-content .wp-block-dp-quote-form,
+.wp-block-post-content .wp-block-dp-before-after-slider {
+	margin-left: calc(-1 * var(--wp--style--root--padding-left, 0px)) !important;
+	margin-right: calc(-1 * var(--wp--style--root--padding-right, 0px)) !important;
+	max-width: none !important;
+	width: 100vw !important;
+	position: relative !important;
+	left: 50% !important;
+	right: auto !important;
+	transform: translateX(-50%) !important;
+}
+
+/* Make post-content wrapper full-width when it contains dp blocks */
+.wp-block-post-content.has-global-padding {
+	max-width: none !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
