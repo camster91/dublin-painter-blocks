@@ -1,0 +1,15 @@
+.dp-trust-badges-section { padding: 1.5rem 0; background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
+.dp-section-container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+.dp-badges-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.dp-trust-badge-item { display: flex; align-items: center; gap: 1rem; }
+.dp-badge-icon-circle { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 1px 2px rgb(0 0 0 / 0.05); border: 2px solid rgba(37,99,235,0.15); background: #fff; color: var(--wp--preset--color--brand-blue, #2563eb); }
+.dp-badge-icon-circle svg { width: 24px; height: 24px; }
+.dp-badge-icon-circle svg[fill="currentColor"] { fill: var(--wp--preset--color--brand-blue, #2563eb); }
+.dp-badge-label { font-weight: 700; font-size: 0.9375rem; color: #0f172a; }
+.dp-badge-subtext { font-size: 0.8125rem; color: #475569; margin-top: 2px; }
+@media (max-width: 1024px) { .dp-badges-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .dp-badges-grid { grid-template-columns: 1fr; } }
+body.dark-mode .dp-trust-badges-section { background: #0f172a; border-color: #1e293b; }
+body.dark-mode .dp-badge-label { color: #fff; }
+body.dark-mode .dp-badge-subtext { color: #94a3b8; }
+body.dark-mode .dp-badge-icon-circle { background: #1e293b; border-color: #334155; }

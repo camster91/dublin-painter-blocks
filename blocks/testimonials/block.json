@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "dp/testimonials",
+	"title": "Testimonials",
+	"description": "Glassmorphic testimonial cards. Queries dp_testimonial CPT or shows custom reviews.",
+	"category": "dublin-painter",
+	"icon": "format-quote",
+	"version": "1.0.0",
+	"textdomain": "dublin-painter-blocks",
+	"attributes": {
+		"heading": { "type": "string", "default": "What Our Dublin Clients Say" },
+		"maxReviews": { "type": "number", "default": 4 },
+		"onlyFeatured": { "type": "boolean", "default": false }
+	},
+	"supports": { "html": false, "align": ["wide", "full"] },
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

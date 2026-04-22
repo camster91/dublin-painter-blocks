@@ -1,0 +1,14 @@
+.dp-cta-section { position: relative; padding: 6rem 0; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #fff; overflow: hidden; text-align: center; }
+.dp-cta-blob { position: absolute; border-radius: 50%; pointer-events: none; }
+.dp-cta-blob-1 { top: -80px; left: -60px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%); }
+.dp-cta-blob-2 { bottom: -60px; right: -80px; width: 350px; height: 350px; background: radial-gradient(circle, rgba(22,163,74,0.1) 0%, transparent 70%); }
+.dp-cta-content { position: relative; z-index: 1; }
+.dp-cta-heading { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin-bottom: 1rem; }
+.dp-cta-subheading { font-size: 1.125rem; color: #94a3b8; max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.7; }
+.dp-cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.dp-cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; border-radius: 0.75rem; font-weight: 700; font-size: 1rem; text-decoration: none; transition: all 0.3s ease; }
+.dp-cta-btn--primary { background: var(--wp--preset--color--brand-blue, #2563eb); color: #fff; box-shadow: 0 10px 30px -8px rgba(37,99,235,0.5); }
+.dp-cta-btn--primary:hover { background: #1d4ed8; transform: translateY(-2px); }
+.dp-cta-btn--outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.3); }
+.dp-cta-btn--outline:hover { border-color: #2563eb; background: rgba(37,99,235,0.1); }
+@media (max-width: 640px) { .dp-cta-actions { flex-direction: column; align-items: center; } }

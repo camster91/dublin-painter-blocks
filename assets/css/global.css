@@ -42,3 +42,65 @@
 		transition: none;
 	}
 }
+
+/* ─── Shared Section Styles ─── */
+
+.dp-section-container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+.dp-section-header {
+	text-align: center;
+	max-width: 700px;
+	margin: 0 auto 2rem;
+}
+
+.dp-badge-pill {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.375rem;
+	padding: 0.375rem 1rem;
+	border-radius: 9999px;
+	background: rgba(37, 99, 235, 0.1);
+	color: var(--wp--preset--color--brand-blue, #2563eb);
+	font-weight: 600;
+	font-size: 0.8125rem;
+	margin-bottom: 1rem;
+}
+
+.dp-badge-pill svg {
+	width: 14px;
+	height: 14px;
+}
+
+.dp-section-heading {
+	font-size: clamp(2rem, 3.5vw, 3rem);
+	font-weight: 900;
+	color: #0f172a;
+	line-height: 1.2;
+	margin-bottom: 1rem;
+}
+
+.dp-section-subheading {
+	font-size: 1.125rem;
+	color: #475569;
+	line-height: 1.7;
+}
+
+.dp-benefit-check {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: rgba(22, 163, 74, 0.15);
+	flex-shrink: 0;
+	color: #16a34a;
+}
+
+body.dark-mode .dp-section-heading { color: #fff; }
+body.dark-mode .dp-section-subheading { color: #94a3b8; }
+body.dark-mode .dp-badge-pill { background: rgba(37, 99, 235, 0.2); }

@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "dp/pricing",
+	"title": "Pricing",
+	"description": "3-tier pricing cards with featured highlight.",
+	"category": "dublin-painter",
+	"icon": "dollar-sign",
+	"version": "1.0.0",
+	"textdomain": "dublin-painter-blocks",
+	"attributes": {
+		"tiers": {
+			"type": "array",
+			"default": [
+				{ "name": "Essential", "price": "From €1,500", "features": ["Single room refresh", "Standard paints", "1-year guarantee"], "featured": false },
+				{ "name": "Premium", "price": "From €3,500", "features": ["Full house interior", "Premium Dulux paints", "5-year guarantee", "Colour consultation"], "featured": true },
+				{ "name": "Complete", "price": "Custom Quote", "features": ["Interior + Exterior", "All premium materials", "10-year guarantee", "Dedicated project manager"], "featured": false }
+			]
+		}
+	},
+	"supports": { "html": false, "align": ["wide", "full"] },
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

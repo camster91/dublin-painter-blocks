@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "dp/process-timeline",
+	"title": "Process Timeline",
+	"description": "Numbered animated steps showing your work process.",
+	"category": "dublin-painter",
+	"icon": "list-ordered",
+	"version": "1.0.0",
+	"textdomain": "dublin-painter-blocks",
+	"attributes": {
+		"heading": { "type": "string", "default": "Our Process" },
+		"steps": {
+			"type": "array",
+			"default": [
+				{ "title": "Consultation", "description": "Free on-site assessment and detailed quote." },
+				{ "title": "Preparation", "description": "Expert surface prep including cleaning, sanding and repairs." },
+				{ "title": "Painting", "description": "Premium materials applied with precision craftsmanship." },
+				{ "title": "Inspection", "description": "Final walkthrough to ensure your complete satisfaction." }
+			]
+		}
+	},
+	"supports": { "html": false, "align": ["wide", "full"] },
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

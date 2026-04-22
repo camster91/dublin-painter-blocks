@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "dp/service-features",
+	"title": "Service Features",
+	"description": "Service details with alternating image/text layout and green checkmark bullets. Queries dp_service CPT or shows custom attributes.",
+	"category": "dublin-painter",
+	"icon": "layout-grid",
+	"version": "1.0.0",
+	"textdomain": "dublin-painter-blocks",
+	"attributes": {
+		"heading": { "type": "string", "default": "Professional Painting Services" },
+		"subheading": { "type": "string", "default": "We provide professional painting and decoration solutions for every property type in Dublin." },
+		"features": {
+			"type": "array",
+			"default": [
+				{ "title": "Expert Interior Decorating", "description": "Flawless luxury finishes with our signature dustless sanding technology. We transform living spaces with minimal disruption.", "image": "", "bullets": ["Dustless Sanding Technology", "Premium Farrow & Ball Finishes", "Expert Colour Consultation"] },
+				{ "title": "10-Year Exterior Protection", "description": "Protect your home with advanced breathable masonry coatings guaranteed for a decade.", "image": "", "bullets": ["Weatherproof Masonry Coatings", "Professional Power Washing", "10-Year Written Guarantee"] },
+				{ "title": "Zero-Downtime Commercial", "description": "Night and weekend scheduling for offices, retail, and industrial painting across Dublin.", "image": "", "bullets": ["Flexible Scheduling", "Minimal Business Disruption", "Commercial-Grade Materials"] }
+			]
+		}
+	},
+	"supports": { "html": false, "align": ["wide", "full"] },
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}
