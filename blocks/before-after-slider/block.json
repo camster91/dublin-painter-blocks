@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "dp/before-after-slider",
+	"title": "Before/After Slider",
+	"description": "Interactive drag slider comparing before and after project photos. Pulls projects from the Projects CPT.",
+	"category": "dublin-painter",
+	"icon": "columns",
+	"keywords": ["before", "after", "slider", "project", "gallery"],
+	"version": "1.0.0",
+	"textdomain": "dublin-painter-blocks",
+	"attributes": {
+		"columns": {
+			"type": "number",
+			"default": 2
+		},
+		"showLabels": {
+			"type": "boolean",
+			"default": true
+		},
+		"showLocation": {
+			"type": "boolean",
+			"default": true
+		},
+		"onlyFeatured": {
+			"type": "boolean",
+			"default": true
+		},
+		"maxProjects": {
+			"type": "number",
+			"default": 4
+		},
+		"heading": {
+			"type": "string",
+			"default": "See the Transformation"
+		},
+		"subheading": {
+			"type": "string",
+			"default": "Real projects. Real results. Drag the slider to compare."
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}

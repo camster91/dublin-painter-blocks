@@ -1,0 +1,44 @@
+/* ─── Dublin Painter Blocks — Global Styles ─── */
+
+/* Design Tokens (match FSE theme) */
+:root {
+	--dp-brand-blue: #2563eb;
+	--dp-brand-green: #16a34a;
+	--dp-brand-gold: #D4A843;
+	--dp-brand-dark: #0f172a;
+	--dp-brand-light: #f8fafc;
+	--dp-white: #ffffff;
+	--dp-text-primary: #0f172a;
+	--dp-text-secondary: #475569;
+	--dp-text-light: #94a3b8;
+	--dp-card-border: #e2e8f0;
+	--dp-radius-md: 0.75rem;
+	--dp-radius-lg: 1rem;
+	--dp-radius-xl: 1.5rem;
+	--dp-radius-2xl: 2rem;
+	--dp-radius-full: 9999px;
+	--dp-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+	--dp-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+	--dp-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+	--dp-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+/* ─── Scroll Reveal Animation ─── */
+.dp-reveal {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.dp-reveal.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.dp-reveal {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+}
