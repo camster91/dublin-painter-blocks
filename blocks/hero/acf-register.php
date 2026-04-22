@@ -1,42 +1,17 @@
 <?php
 /**
- * Hero Block — ACF Registration
+ * Hero Block — ACF Field Group Registration
  *
- * Registers the dp/hero block as an ACF block with a full
- * field group for client editing in the Site Editor.
+ * Registers the ACF field group for the acf/hero block.
+ * The block itself is registered via block.json (ACF 6.x auto-discovery).
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-add_action( 'acf/init', 'dp_register_hero_block' );
-function dp_register_hero_block() {
-	if ( ! function_exists( 'acf_register_block_type' ) ) {
-		return;
-	}
-
-	acf_register_block_type( array(
-		'name'            => 'hero',
-		'title'           => 'Hero Section',
-		'description'     => 'Dark hero section with animated background, star badge, headline, subheadline, dual CTAs, and floating trust card.',
-		'category'        => 'dublin-painter',
-		'icon'            => 'cover-image',
-		'keywords'        => array( 'hero', 'landing', 'header', 'banner' ),
-		'post_types'      => array( 'wp_template', 'wp_template_part', 'page', 'post' ),
-		'mode'            => 'preview',
-		'align'           => 'full',
-		'supports'       => array(
-			'align'  => array( 'full' ),
-			'anchor' => true,
-			'color'  => array( 'background' => false, 'text' => false ),
-		),
-		'render_template' => DP_BLOCKS_PATH . 'blocks/hero/render.php',
-		'enqueue_style'   => DP_BLOCKS_URI . 'blocks/hero/style.css',
-	) );
-}
-
 add_action( 'acf/init', 'dp_register_hero_fields' );
+
 function dp_register_hero_fields() {
 	if ( ! function_exists( 'acf_add_local_field_group' ) ) {
 		return;
@@ -173,7 +148,7 @@ function dp_register_hero_fields() {
 				'type'          => 'image',
 				'return_format' => 'array',
 				'preview_size'  => 'large',
-				'instructions'  => 'Recommended: 600x450px image of painters working or a beautiful painted house.',
+				'instructions'  => 'Recommended: 600×450px image of painters working or a beautiful painted house.',
 			),
 
 			// Tab: Floating Card
@@ -216,7 +191,7 @@ function dp_register_hero_fields() {
 				array(
 					'param'    => 'block',
 					'operator' => '==',
-					'value'    => 'acf/hero',
+					'value'    => 'dp/hero',
 				),
 			),
 		),

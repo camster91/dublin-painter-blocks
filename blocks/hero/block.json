@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "dp/hero",
+	"title": "Hero Section",
+	"description": "Hero section with animated background, star badge, headline, subheadline, dual CTAs, benefits, and floating trust card. Fully editable via ACF fields.",
+	"category": "dublin-painter",
+	"icon": "cover-image",
+	"keywords": ["hero", "landing", "header", "banner", "painter"],
+	"supports": {
+		"align": ["full"],
+		"anchor": true,
+		"color": {
+			"background": false,
+			"text": false
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"style": ["file:./style.css"],
+	"viewScript": []
+}

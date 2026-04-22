@@ -103,9 +103,9 @@ function dp_blocks_register_cpts() {
 }
 
 // ─── Register ACF field groups (if ACF is active) ───
-add_action( 'acf/init', 'dp_blocks_register_acf_fields' );
+add_action( 'acf/init', 'dp_cpt_register_acf_fields' );
 
-function dp_blocks_register_acf_fields() {
+function dp_cpt_register_acf_fields() {
 	if ( ! function_exists( 'acf_add_local_field_group' ) ) {
 		return;
 	}
