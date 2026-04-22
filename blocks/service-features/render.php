@@ -51,7 +51,7 @@ foreach ( $features_raw as $feat ) {
 							</div>
 						</div>
 					<?php endif; ?>
-					<div class="dp-feature-text">
+					<div class="dp-feature-content">
 						<h3 class="dp-feature-title"><?php echo esc_html( $feature['title'] ); ?></h3>
 						<p class="dp-feature-desc"><?php echo esc_html( $feature['description'] ); ?></p>
 						<?php if ( ! empty( $feature['bullets'] ) ) : ?>
