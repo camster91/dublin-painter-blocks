@@ -3,12 +3,17 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 $badge_text = get_field( 'badge_text' ) ?? $attributes['badge_text'] ?? 'Our Expertise';
 $heading = get_field( 'heading' ) ?? $attributes['heading'] ?? 'Professional Painting Services';
 $subheading = get_field( 'subheading' ) ?? $attributes['subheading'] ?? '';
-$features_raw = get_field( 'features' ) ?: $attributes['features'] ?? array();
+$features_raw = get_field( 'features' );
+$theme_uri = get_stylesheet_directory_uri();
+
+// Debug: check what features_raw is
+$debug_info = 'features_raw type=' . gettype($features_raw) . ' empty=' . (empty($features_raw) ? 'Y' : 'N') . ' count=' . (is_array($features_raw) ? count($features_raw) : 'N/A');
+
 if ( empty( $features_raw ) ) {
 	$features_raw = array(
-		array( 'title' => 'Expert Interior Decorating', 'description' => 'Flawless luxury finishes with our signature dustless sanding technology.', 'image' => '', 'bullets' => array( 'Dustless Sanding Technology', 'Premium Farrow & Ball Finishes', 'Expert Colour Consultation' ) ),
-		array( 'title' => '10-Year Exterior Protection', 'description' => 'Protect your home with advanced breathable masonry coatings guaranteed for a decade.', 'image' => '', 'bullets' => array( 'Weatherproof Masonry Coatings', 'Professional Power Washing', '10-Year Written Guarantee' ) ),
-		array( 'title' => 'Zero-Downtime Commercial', 'description' => 'Night and weekend scheduling for offices, retail, and industrial painting across Dublin.', 'image' => '', 'bullets' => array( 'Flexible Scheduling', 'Minimal Business Disruption', 'Commercial-Grade Materials' ) ),
+		array( 'title' => 'Expert Interior Decorating', 'description' => 'Flawless luxury finishes with our signature dustless sanding technology.', 'image' => $theme_uri . '/assets/images/project_interior_green.jpg', 'bullets' => array( 'Dustless Sanding Technology', 'Premium Farrow & Ball Finishes', 'Expert Colour Consultation' ) ),
+		array( 'title' => '10-Year Exterior Protection', 'description' => 'Protect your home with advanced breathable masonry coatings guaranteed for a decade.', 'image' => $theme_uri . '/assets/images/project_georgian_door.jpg', 'bullets' => array( 'Weatherproof Masonry Coatings', 'Professional Power Washing', '10-Year Written Guarantee' ) ),
+		array( 'title' => 'Zero-Downtime Commercial', 'description' => 'Night and weekend scheduling for offices, retail, and industrial painting across Dublin.', 'image' => $theme_uri . '/assets/images/project_office.jpg', 'bullets' => array( 'Flexible Scheduling', 'Minimal Business Disruption', 'Commercial-Grade Materials' ) ),
 	);
 }
 $features = array();
@@ -36,8 +41,15 @@ foreach ( $features_raw as $feat ) {
 		<div class="dp-features-list">
 			<?php $i = 0; foreach ( $features as $feature ) : $i++; ?>
 				<div class="dp-feature-row dp-feature-row--<?php echo $i % 2 === 0 ? 'reverse' : 'normal'; ?>">
-					<?php if ( $feature['image'] ) : ?>
-						<div class="dp-feature-image"><img src="<?php echo esc_url( $feature['image'] ); ?>" alt="<?php echo esc_attr( $feature['title'] ); ?>" loading="lazy"></div>
+					<?php if ( ! empty( $feature['image'] ) ) : ?>
+						<div class="dp-feature-image"><img src="<?php echo esc_url( $feature['image'] ); ?>" alt="<?php echo esc_attr( $feature['title'] ); ?>" loading="lazy" class="dp-feature-img"></div>
+					<?php else : ?>
+						<div class="dp-feature-image">
+							<div class="dp-feature-placeholder">
+								<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+								<span>Add image via ACF</span>
+							</div>
+						</div>
 					<?php endif; ?>
 					<div class="dp-feature-text">
 						<h3 class="dp-feature-title"><?php echo esc_html( $feature['title'] ); ?></h3>
