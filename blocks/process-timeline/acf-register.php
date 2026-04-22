@@ -7,7 +7,9 @@ function dp_register_process_timeline_fields() {
 		'key' => 'group_dp_process',
 		'title' => 'Process Timeline',
 		'fields' => array(
+			array( 'key' => 'field_pt_badge', 'label' => 'Badge Text', 'name' => 'badge_text', 'type' => 'text', 'default' => 'How It Works' ),
 			array( 'key' => 'field_pt_heading', 'label' => 'Heading', 'name' => 'heading', 'type' => 'text', 'default' => 'Our Process' ),
+			array( 'key' => 'field_pt_subheading', 'label' => 'Subheading', 'name' => 'subheading', 'type' => 'text', 'default' => '' ),
 			array( 'key' => 'field_pt_steps', 'label' => 'Steps', 'name' => 'steps', 'type' => 'repeater', 'layout' => 'table', 'button_label' => 'Add Step', 'max' => 6, 'sub_fields' => array(
 				array( 'key' => 'field_pt_step_title', 'label' => 'Title', 'name' => 'title', 'type' => 'text', 'default' => 'Consultation' ),
 				array( 'key' => 'field_pt_step_desc', 'label' => 'Description', 'name' => 'description', 'type' => 'textarea', 'rows' => 2, 'default' => 'Free on-site assessment and detailed quote.' ),

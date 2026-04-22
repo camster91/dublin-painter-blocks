@@ -1,6 +1,8 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
+$badge_text = get_field( 'badge_text' ) ?? $attributes['badge_text'] ?? 'How It Works';
 $heading = get_field( 'heading' ) ?? $attributes['heading'] ?? 'Our Process';
+$subheading = get_field( 'subheading' ) ?? $attributes['subheading'] ?? '';
 $steps = get_field( 'steps' ) ?: $attributes['steps'] ?? array(
 	array( 'title' => 'Consultation', 'description' => 'Free on-site assessment and detailed quote.' ),
 	array( 'title' => 'Preparation', 'description' => 'Expert surface prep including cleaning, sanding and repairs.' ),
@@ -10,12 +12,11 @@ $steps = get_field( 'steps' ) ?: $attributes['steps'] ?? array(
 ?>
 <section <?php echo get_block_wrapper_attributes( array( 'class' => 'dp-process-section' ) ); ?>>
 	<div class="dp-section-container">
-		<?php if ( $heading ) : ?>
-			<div class="dp-section-header">
-				<div class="dp-badge-pill"><?php esc_html_e( 'How It Works', 'dublin-painter-blocks' ); ?></div>
-				<h2 class="dp-section-heading"><?php echo esc_html( $heading ); ?></h2>
-			</div>
-		<?php endif; ?>
+		<div class="dp-section-header">
+			<?php if ( $badge_text ) : ?><div class="dp-badge-pill"><?php echo esc_html( $badge_text ); ?></div><?php endif; ?>
+			<?php if ( $heading ) : ?><h2 class="dp-section-heading"><?php echo esc_html( $heading ); ?></h2><?php endif; ?>
+			<?php if ( $subheading ) : ?><p class="dp-section-subheading"><?php echo esc_html( $subheading ); ?></p><?php endif; ?>
+		</div>
 		<div class="dp-process-grid">
 			<?php $i = 1; foreach ( $steps as $step ) : ?>
 				<div class="dp-process-step">

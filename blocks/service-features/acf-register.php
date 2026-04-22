@@ -7,6 +7,7 @@ function dp_register_service_features_fields() {
 		'key' => 'group_dp_service_features',
 		'title' => 'Service Features',
 		'fields' => array(
+			array( 'key' => 'field_sf_badge', 'label' => 'Badge Text', 'name' => 'badge_text', 'type' => 'text', 'default' => 'Our Expertise' ),
 			array( 'key' => 'field_sf_heading', 'label' => 'Heading', 'name' => 'heading', 'type' => 'text', 'default' => 'Professional Painting Services' ),
 			array( 'key' => 'field_sf_subheading', 'label' => 'Subheading', 'name' => 'subheading', 'type' => 'text', 'default' => '' ),
 			array( 'key' => 'field_sf_features', 'label' => 'Features', 'name' => 'features', 'type' => 'repeater', 'layout' => 'table', 'button_label' => 'Add Feature', 'max' => 4, 'sub_fields' => array(

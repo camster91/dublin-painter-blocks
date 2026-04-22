@@ -7,6 +7,7 @@ function dp_register_before_after_slider_fields() {
 		'key' => 'group_dp_ba_slider',
 		'title' => 'Before/After Slider',
 		'fields' => array(
+			array( 'key' => 'field_ba_badge', 'label' => 'Badge Text', 'name' => 'badge_text', 'type' => 'text', 'default' => 'Real Results' ),
 			array( 'key' => 'field_ba_heading', 'label' => 'Heading', 'name' => 'heading', 'type' => 'text', 'default' => 'See the Transformation' ),
 			array( 'key' => 'field_ba_subheading', 'label' => 'Subheading', 'name' => 'subheading', 'type' => 'text', 'default' => 'Real projects. Real results. Drag the slider to compare.' ),
 			array( 'key' => 'field_ba_columns', 'label' => 'Columns', 'name' => 'columns', 'type' => 'number', 'default' => 2, 'min' => 1, 'max' => 4 ),
