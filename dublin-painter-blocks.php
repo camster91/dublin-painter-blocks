@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Dublin Painter Blocks
  * Description: Custom Gutenberg blocks for Dublin Painter FSE theme. Includes Before/After Slider, Hero, Testimonials, Trust Badges, and more.
- * Version: 1.1.0
+ * Version: 1.2.0
  * Author: Ashbi Design
  * Text Domain: dublin-painter-blocks
  * Requires at least: 6.4
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'DP_BLOCKS_VERSION', '1.1.0' );
+define( 'DP_BLOCKS_VERSION', '1.2.0' );
 define( 'DP_BLOCKS_PATH', plugin_dir_path( __FILE__ ) );
 define( 'DP_BLOCKS_URI', plugin_dir_url( __FILE__ ) );
 
