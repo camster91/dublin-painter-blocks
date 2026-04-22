@@ -13,10 +13,22 @@
 		"steps": {
 			"type": "array",
 			"default": [
-				{ "title": "Consultation", "description": "Free on-site assessment and detailed quote." },
-				{ "title": "Preparation", "description": "Expert surface prep including cleaning, sanding and repairs." },
-				{ "title": "Painting", "description": "Premium materials applied with precision craftsmanship." },
-				{ "title": "Inspection", "description": "Final walkthrough to ensure your complete satisfaction." }
+				{
+					"title": "Consultation",
+					"description": "Free on-site assessment and detailed quote."
+				},
+				{
+					"title": "Preparation",
+					"description": "Expert surface prep including cleaning, sanding and repairs."
+				},
+				{
+					"title": "Painting",
+					"description": "Premium materials applied with precision craftsmanship."
+				},
+				{
+					"title": "Inspection",
+					"description": "Final walkthrough to ensure your complete satisfaction."
+				}
 			]
 		}
 	},

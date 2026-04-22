@@ -9,8 +9,14 @@
 	"version": "1.0.0",
 	"textdomain": "dublin-painter-blocks",
 	"attributes": {
-		"heading": { "type": "string", "default": "Ready to Transform Your Space?" },
-		"subheading": { "type": "string", "default": "Get your free, no-obligation quote today and join 500+ happy Dublin homeowners." },
+		"heading": {
+			"type": "string",
+			"default": "Ready to Transform Your Space?"
+		},
+		"subheading": {
+			"type": "string",
+			"default": "Get your free, no-obligation quote today and join 500+ happy Dublin homeowners."
+		},
 		"ctaText": { "type": "string", "default": "Get a Free Quote" },
 		"ctaUrl": { "type": "string", "default": "/get-quote" },
 		"phoneText": { "type": "string", "default": "Call 01 234 5678" },

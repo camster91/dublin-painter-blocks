@@ -13,11 +13,26 @@
 		"questions": {
 			"type": "array",
 			"default": [
-				{ "question": "How long does a typical painting project take?", "answer": "Most interior projects take 2-5 days. Exterior projects depend on weather but typically 3-7 days. We provide a detailed timeline with every quote." },
-				{ "question": "Do you provide free quotes?", "answer": "Yes, all quotes are 100% free with no obligation. We visit your property, assess the work required, and provide a detailed fixed-price quote within 24 hours." },
-				{ "question": "What areas of Dublin do you cover?", "answer": "We cover all of Dublin city and county, including Howth, Malahide, Dun Laoghaire, Blackrock, Castleknock, and towns within a 30km radius." },
-				{ "question": "Are you fully insured?", "answer": "Yes, we carry 2M euro Public Liability insurance and all our painters are Safe Pass certified. You are fully protected on every project." },
-				{ "question": "What paint brands do you use?", "answer": "We primarily use Dulux and Fleetwood premium paints. We can accommodate specific brand requests and offer expert colour consultation to help you choose the perfect finish." }
+				{
+					"question": "How long does a typical painting project take?",
+					"answer": "Most interior projects take 2-5 days. Exterior projects depend on weather but typically 3-7 days. We provide a detailed timeline with every quote."
+				},
+				{
+					"question": "Do you provide free quotes?",
+					"answer": "Yes, all quotes are 100% free with no obligation. We visit your property, assess the work required, and provide a detailed fixed-price quote within 24 hours."
+				},
+				{
+					"question": "What areas of Dublin do you cover?",
+					"answer": "We cover all of Dublin city and county, including Howth, Malahide, Dun Laoghaire, Blackrock, Castleknock, and towns within a 30km radius."
+				},
+				{
+					"question": "Are you fully insured?",
+					"answer": "Yes, we carry 2M euro Public Liability insurance and all our painters are Safe Pass certified. You are fully protected on every project."
+				},
+				{
+					"question": "What paint brands do you use?",
+					"answer": "We primarily use Dulux and Fleetwood premium paints. We can accommodate specific brand requests and offer expert colour consultation to help you choose the perfect finish."
+				}
 			]
 		}
 	},

@@ -1,5 +1,30 @@
-.dp-areas-section { padding: 6rem 0; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #fff; }
-.dp-areas-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-top: 3rem; }
-.dp-area-pill { padding: 0.625rem 1.25rem; border-radius: 9999px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); font-size: 0.9375rem; font-weight: 500; color: #e2e8f0; transition: all 0.3s ease; }
-.dp-area-pill:hover { background: rgba(37,99,235,0.2); border-color: var(--wp--preset--color--brand-blue, #2563eb); color: #fff; }
-body.dark-mode .dp-areas-section { background: #0a0f1a; }
+.dp-areas-section {
+	padding: 6rem 0;
+	background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+	color: #fff;
+}
+.dp-areas-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	justify-content: center;
+	margin-top: 3rem;
+}
+.dp-area-pill {
+	padding: 0.625rem 1.25rem;
+	border-radius: 9999px;
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	font-size: 0.9375rem;
+	font-weight: 500;
+	color: #e2e8f0;
+	transition: all 0.3s ease;
+}
+.dp-area-pill:hover {
+	background: rgba(37, 99, 235, 0.2);
+	border-color: var(--wp--preset--color--brand-blue, #2563eb);
+	color: #fff;
+}
+body.dark-mode .dp-areas-section {
+	background: #0a0f1a;
+}

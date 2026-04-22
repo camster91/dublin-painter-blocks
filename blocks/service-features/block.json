@@ -9,14 +9,47 @@
 	"version": "1.0.0",
 	"textdomain": "dublin-painter-blocks",
 	"attributes": {
-		"heading": { "type": "string", "default": "Professional Painting Services" },
-		"subheading": { "type": "string", "default": "We provide professional painting and decoration solutions for every property type in Dublin." },
+		"heading": {
+			"type": "string",
+			"default": "Professional Painting Services"
+		},
+		"subheading": {
+			"type": "string",
+			"default": "We provide professional painting and decoration solutions for every property type in Dublin."
+		},
 		"features": {
 			"type": "array",
 			"default": [
-				{ "title": "Expert Interior Decorating", "description": "Flawless luxury finishes with our signature dustless sanding technology. We transform living spaces with minimal disruption.", "image": "", "bullets": ["Dustless Sanding Technology", "Premium Farrow & Ball Finishes", "Expert Colour Consultation"] },
-				{ "title": "10-Year Exterior Protection", "description": "Protect your home with advanced breathable masonry coatings guaranteed for a decade.", "image": "", "bullets": ["Weatherproof Masonry Coatings", "Professional Power Washing", "10-Year Written Guarantee"] },
-				{ "title": "Zero-Downtime Commercial", "description": "Night and weekend scheduling for offices, retail, and industrial painting across Dublin.", "image": "", "bullets": ["Flexible Scheduling", "Minimal Business Disruption", "Commercial-Grade Materials"] }
+				{
+					"title": "Expert Interior Decorating",
+					"description": "Flawless luxury finishes with our signature dustless sanding technology. We transform living spaces with minimal disruption.",
+					"image": "",
+					"bullets": [
+						"Dustless Sanding Technology",
+						"Premium Farrow & Ball Finishes",
+						"Expert Colour Consultation"
+					]
+				},
+				{
+					"title": "10-Year Exterior Protection",
+					"description": "Protect your home with advanced breathable masonry coatings guaranteed for a decade.",
+					"image": "",
+					"bullets": [
+						"Weatherproof Masonry Coatings",
+						"Professional Power Washing",
+						"10-Year Written Guarantee"
+					]
+				},
+				{
+					"title": "Zero-Downtime Commercial",
+					"description": "Night and weekend scheduling for offices, retail, and industrial painting across Dublin.",
+					"image": "",
+					"bullets": [
+						"Flexible Scheduling",
+						"Minimal Business Disruption",
+						"Commercial-Grade Materials"
+					]
+				}
 			]
 		}
 	},

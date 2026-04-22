@@ -10,7 +10,10 @@
 	"textdomain": "dublin-painter-blocks",
 	"attributes": {
 		"heading": { "type": "string", "default": "Get Your Free Estimate" },
-		"subheading": { "type": "string", "default": "Takes 60 seconds. No obligation." }
+		"subheading": {
+			"type": "string",
+			"default": "Takes 60 seconds. No obligation."
+		}
 	},
 	"supports": { "html": false, "align": ["wide", "full"] },
 	"style": "file:./style.css",

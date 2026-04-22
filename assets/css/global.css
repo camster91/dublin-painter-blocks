@@ -4,7 +4,7 @@
 :root {
 	--dp-brand-blue: #2563eb;
 	--dp-brand-green: #16a34a;
-	--dp-brand-gold: #D4A843;
+	--dp-brand-gold: #d4a843;
 	--dp-brand-dark: #0f172a;
 	--dp-brand-light: #f8fafc;
 	--dp-white: #ffffff;
@@ -27,7 +27,9 @@
 .dp-reveal {
 	opacity: 0;
 	transform: translateY(20px);
-	transition: opacity 0.6s ease, transform 0.6s ease;
+	transition:
+		opacity 0.6s ease,
+		transform 0.6s ease;
 }
 
 .dp-reveal.is-visible {
@@ -101,6 +103,12 @@
 	color: #16a34a;
 }
 
-body.dark-mode .dp-section-heading { color: #fff; }
-body.dark-mode .dp-section-subheading { color: #94a3b8; }
-body.dark-mode .dp-badge-pill { background: rgba(37, 99, 235, 0.2); }
+body.dark-mode .dp-section-heading {
+	color: #fff;
+}
+body.dark-mode .dp-section-subheading {
+	color: #94a3b8;
+}
+body.dark-mode .dp-badge-pill {
+	background: rgba(37, 99, 235, 0.2);
+}

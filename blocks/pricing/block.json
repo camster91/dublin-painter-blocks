@@ -12,9 +12,38 @@
 		"tiers": {
 			"type": "array",
 			"default": [
-				{ "name": "Essential", "price": "From €1,500", "features": ["Single room refresh", "Standard paints", "1-year guarantee"], "featured": false },
-				{ "name": "Premium", "price": "From €3,500", "features": ["Full house interior", "Premium Dulux paints", "5-year guarantee", "Colour consultation"], "featured": true },
-				{ "name": "Complete", "price": "Custom Quote", "features": ["Interior + Exterior", "All premium materials", "10-year guarantee", "Dedicated project manager"], "featured": false }
+				{
+					"name": "Essential",
+					"price": "From €1,500",
+					"features": [
+						"Single room refresh",
+						"Standard paints",
+						"1-year guarantee"
+					],
+					"featured": false
+				},
+				{
+					"name": "Premium",
+					"price": "From €3,500",
+					"features": [
+						"Full house interior",
+						"Premium Dulux paints",
+						"5-year guarantee",
+						"Colour consultation"
+					],
+					"featured": true
+				},
+				{
+					"name": "Complete",
+					"price": "Custom Quote",
+					"features": [
+						"Interior + Exterior",
+						"All premium materials",
+						"10-year guarantee",
+						"Dedicated project manager"
+					],
+					"featured": false
+				}
 			]
 		}
 	},

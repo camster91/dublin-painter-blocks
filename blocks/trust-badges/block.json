@@ -12,10 +12,26 @@
 		"badges": {
 			"type": "array",
 			"default": [
-				{ "icon": "star", "label": "4.9/5 Google Rating", "text": "250+ Verified Reviews" },
-				{ "icon": "shield", "label": "Fully Insured", "text": "€2M Public Liability" },
-				{ "icon": "map", "label": "Serving All Dublin", "text": "City & 30km Surrounds" },
-				{ "icon": "clock", "label": "Reliable & On Time", "text": "Every Project Guaranteed" }
+				{
+					"icon": "star",
+					"label": "4.9/5 Google Rating",
+					"text": "250+ Verified Reviews"
+				},
+				{
+					"icon": "shield",
+					"label": "Fully Insured",
+					"text": "€2M Public Liability"
+				},
+				{
+					"icon": "map",
+					"label": "Serving All Dublin",
+					"text": "City & 30km Surrounds"
+				},
+				{
+					"icon": "clock",
+					"label": "Reliable & On Time",
+					"text": "Every Project Guaranteed"
+				}
 			]
 		}
 	},

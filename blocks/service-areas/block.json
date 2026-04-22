@@ -12,7 +12,33 @@
 		"heading": { "type": "string", "default": "Proudly Serving All of Dublin" },
 		"areas": {
 			"type": "array",
-			"default": ["Dublin City Centre","Dublin 1","Dublin 2","Dublin 4","Dublin 6","Dublin 7","Ranelagh","Rathmines","Ballsbridge","Donnybrook","Blackrock","Dun Laoghaire","Malahide","Howth","Castleknock","Clontarf","Swords","Lucan","Tallaght","Crumlin","Phibsboro","Sandymount","Killiney","Dalkey","Glasnevin"]
+			"default": [
+				"Dublin City Centre",
+				"Dublin 1",
+				"Dublin 2",
+				"Dublin 4",
+				"Dublin 6",
+				"Dublin 7",
+				"Ranelagh",
+				"Rathmines",
+				"Ballsbridge",
+				"Donnybrook",
+				"Blackrock",
+				"Dun Laoghaire",
+				"Malahide",
+				"Howth",
+				"Castleknock",
+				"Clontarf",
+				"Swords",
+				"Lucan",
+				"Tallaght",
+				"Crumlin",
+				"Phibsboro",
+				"Sandymount",
+				"Killiney",
+				"Dalkey",
+				"Glasnevin"
+			]
 		}
 	},
 	"supports": { "html": false, "align": ["wide", "full"] },
