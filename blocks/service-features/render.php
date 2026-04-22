@@ -40,7 +40,7 @@ foreach ( $features_raw as $feat ) {
 		</div>
 		<div class="dp-features-list">
 			<?php $i = 0; foreach ( $features as $feature ) : $i++; ?>
-				<div class="dp-feature-row dp-feature-row--<?php echo $i % 2 === 0 ? 'reverse' : 'normal'; ?>">
+				<div class="dp-feature-row dp-feature-row--<?php echo $i % 2 === 0 ? 'reversed' : 'normal'; ?>">
 					<?php if ( ! empty( $feature['image'] ) ) : ?>
 						<div class="dp-feature-image"><img src="<?php echo esc_url( $feature['image'] ); ?>" alt="<?php echo esc_attr( $feature['title'] ); ?>" loading="lazy" class="dp-feature-img"></div>
 					<?php else : ?>
