@@ -48,7 +48,7 @@ if ( empty( $benefits ) ) {
 }
 
 // Hero image
-$img_url = '';
+$img_url = 'http://staging.constantinpainting.ie/staging/wp-content/themes/dublin-painter-gutenberg-1/assets/images/bg-hero.jpg';
 $img_alt = 'Professional painters in Dublin';
 if ( $hero_image ) {
 	if ( is_array( $hero_image ) ) {

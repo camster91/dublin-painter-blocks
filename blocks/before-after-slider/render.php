@@ -6,23 +6,42 @@ $subheading = get_field( 'subheading' ) ?? $attributes['subheading'] ?? 'Real pr
 $columns = get_field( 'columns' ) ?? $attributes['columns'] ?? 2;
 $show_labels = get_field( 'showLabels' ) ?? $attributes['showLabels'] ?? true;
 $show_location = get_field( 'showLocation' ) ?? $attributes['showLocation'] ?? true;
-$only_featured = get_field( 'onlyFeatured' ) ?? $attributes['onlyFeatured'] ?? true;
+$only_featured = get_field( 'onlyFeatured' ) ?? $attributes['onlyFeatured'] ?? false;
 $max_projects = get_field( 'maxProjects' ) ?? $attributes['maxProjects'] ?? 4;
 $projects = array();
 if ( post_type_exists( 'dp_project' ) ) {
-	$args = array( 'post_type' => 'dp_project', 'posts_per_page' => intval( $max_projects ), 'orderby' => 'date', 'order' => 'DESC' );
-	if ( $only_featured ) { $args['meta_query'] = array( array( 'key' => 'featured', 'value' => '1', 'compare' => '=' ) ); }
+	$args = array( 'post_type' => 'dp_project', 'posts_per_page' => intval( $max_projects ), 'orderby' => 'date', 'order' => 'DESC', 'post_status' => 'publish' );
+	if ( $only_featured ) {
+		$args['meta_query'] = array( array( 'key' => 'featured', 'value' => '1', 'compare' => '=' ) );
+	}
 	$posts = get_posts( $args );
+	// If no featured projects found, try again without the meta filter
+	if ( empty( $posts ) && $only_featured ) {
+		unset( $args['meta_query'] );
+		$posts = get_posts( $args );
+	}
 	foreach ( $posts as $post ) {
 		$before_img = get_field( 'before_image', $post->ID );
 		$after_img = get_field( 'after_image', $post->ID );
 		$before_url = is_array( $before_img ) ? ( $before_img['url'] ?? '' ) : ( is_numeric( $before_img ) ? wp_get_attachment_url( $before_img ) : '' );
 		$after_url = is_array( $after_img ) ? ( $after_img['url'] ?? '' ) : ( is_numeric( $after_img ) ? wp_get_attachment_url( $after_img ) : '' );
-		$projects[] = array( 'title' => get_the_title( $post->ID ), 'location' => get_field( 'location', $post->ID ) ?: '', 'service' => get_field( 'service_type', $post->ID ) ?: '', 'before' => $before_url, 'after' => $after_url );
+		if ( ! $before_url && ! $after_url ) continue; // Skip projects without images
+		$projects[] = array(
+			'title'    => get_the_title( $post->ID ),
+			'location' => get_field( 'project_location', $post->ID ) ?: '',
+			'service'  => get_field( 'service_type', $post->ID ) ?: '',
+			'before'   => $before_url,
+			'after'    => $after_url,
+		);
 	}
 }
 if ( empty( $projects ) ) {
-	$projects = array( array( 'title' => 'Georgian Door Refresh', 'location' => 'Ranelagh', 'service' => 'Exterior', 'before' => '', 'after' => '' ), array( 'title' => 'Living Room Transformation', 'location' => 'Blackrock', 'service' => 'Interior', 'before' => '', 'after' => '' ) );
+	// Fallback: static demo data with theme placeholder images
+	$theme_uri = get_stylesheet_directory_uri();
+	$projects = array(
+		array( 'title' => 'Georgian Door Refresh', 'location' => 'Ranelagh', 'service' => 'Exterior', 'before' => $theme_uri . '/assets/images/before.jpg',  'after' => $theme_uri . '/assets/images/after.jpg' ),
+		array( 'title' => 'Living Room Transformation', 'location' => 'Blackrock', 'service' => 'Interior', 'before' => $theme_uri . '/assets/images/project_exterior_1.jpg', 'after' => $theme_uri . '/assets/images/project_georgian_door.jpg' ),
+	);
 }
 $col_class = $columns >= 3 ? 'dp-ba-grid--3' : ( $columns >= 2 ? 'dp-ba-grid--2' : 'dp-ba-grid--1' );
 ?>
@@ -41,8 +60,8 @@ $col_class = $columns >= 3 ? 'dp-ba-grid--3' : ( $columns >= 2 ? 'dp-ba-grid--2'
 			?>
 				<div class="dp-ba-card">
 					<div class="dp-ba-slider" data-slider>
-						<?php if ( $after ) : ?><img src="<?php echo esc_url( $after ); ?>" alt="<?php echo esc_attr( $project['title'] ?? 'After' ); ?>" class="dp-ba-after" loading="lazy"><?php endif; ?>
-						<?php if ( $before ) : ?><img src="<?php echo esc_url( $before ); ?>" alt="<?php echo esc_attr( $project['title'] ?? 'Before' ); ?>" class="dp-ba-before" loading="lazy"><?php endif; ?>
+						<?php if ( $after ) : ?><img src="<?php echo esc_url( $after ); ?>" alt="<?php echo esc_attr( $project['title'] ?? 'After' ); ?> — After" class="dp-ba-after" loading="lazy"><?php endif; ?>
+						<?php if ( $before ) : ?><img src="<?php echo esc_url( $before ); ?>" alt="<?php echo esc_attr( $project['title'] ?? 'Before' ); ?> — Before" class="dp-ba-before" loading="lazy"><?php endif; ?>
 						<div class="dp-ba-divider" aria-hidden="true"><div class="dp-ba-handle"></div></div>
 					</div>
 					<?php if ( $show_labels ) : ?>
