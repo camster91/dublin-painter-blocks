@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
-$badges = $attributes['badges'] ?? array(
+$badges = get_field( 'badges' ) ?: $attributes['badges'] ?? array(
 	array( 'icon' => 'star', 'label' => '4.9/5 Google Rating', 'text' => '250+ Verified Reviews' ),
 	array( 'icon' => 'shield', 'label' => 'Fully Insured', 'text' => '€2M Public Liability' ),
 	array( 'icon' => 'map', 'label' => 'Serving All Dublin', 'text' => 'City & 30km Surrounds' ),
@@ -20,7 +20,7 @@ $svg = array(
 	<div class="dp-section-container">
 		<div class="dp-badges-grid">
 			<?php foreach ( $badges as $badge ) :
-				$icon = $svg[ $badge['icon'] ] ?? $svg['check'];
+				$icon = $svg[ $badge['icon'] ?? 'check' ] ?? $svg['check'];
 				$label = $badge['label'] ?? '';
 				$text = $badge['text'] ?? '';
 			?>
@@ -28,7 +28,7 @@ $svg = array(
 					<div class="dp-badge-icon-circle"><?php echo $icon; ?></div>
 					<div class="dp-badge-text">
 						<div class="dp-badge-label"><?php echo esc_html( $label ); ?></div>
-						<div class="dp-badge-subtext"><?php echo esc_html( $text ); ?></div>
+						<div class="dp-badge-desc"><?php echo esc_html( $text ); ?></div>
 					</div>
 				</div>
 			<?php endforeach; ?>

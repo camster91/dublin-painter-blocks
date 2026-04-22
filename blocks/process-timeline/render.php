@@ -1,7 +1,7 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
-$heading = $attributes['heading'] ?? 'Our Process';
-$steps = $attributes['steps'] ?? array(
+$heading = get_field( 'heading' ) ?? $attributes['heading'] ?? 'Our Process';
+$steps = get_field( 'steps' ) ?: $attributes['steps'] ?? array(
 	array( 'title' => 'Consultation', 'description' => 'Free on-site assessment and detailed quote.' ),
 	array( 'title' => 'Preparation', 'description' => 'Expert surface prep including cleaning, sanding and repairs.' ),
 	array( 'title' => 'Painting', 'description' => 'Premium materials applied with precision craftsmanship.' ),

@@ -1,7 +1,17 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
-$heading = $attributes['heading'] ?? 'Proudly Serving All of Dublin';
-$areas = $attributes['areas'] ?? array( 'Dublin City Centre', 'Ranelagh', 'Rathmines', 'Ballsbridge', 'Blackrock', 'Dun Laoghaire', 'Malahide', 'Howth', 'Castleknock', 'Clontarf', 'Swords', 'Lucan', 'Tallaght', 'Crumlin', 'Phibsboro', 'Sandymount', 'Killiney', 'Dalkey', 'Glasnevin' );
+$heading = get_field( 'heading' ) ?? $attributes['heading'] ?? 'Proudly Serving All of Dublin';
+$areas_raw = get_field( 'areas' ) ?: $attributes['areas'] ?? array( 'Dublin City Centre', 'Ranelagh', 'Rathmines', 'Ballsbridge', 'Blackrock', 'Dun Laoghaire', 'Malahide', 'Howth', 'Castleknock', 'Clontarf', 'Swords', 'Lucan', 'Tallaght', 'Crumlin', 'Phibsboro', 'Sandymount', 'Killiney', 'Dalkey', 'Glasnevin' );
+// Extract area names from repeater format or flat array
+$areas = array();
+foreach ( $areas_raw as $area ) {
+	if ( is_array( $area ) ) {
+		$areas[] = $area['name'] ?? $area['text'] ?? '';
+	} else {
+		$areas[] = $area;
+	}
+}
+$areas = array_filter( $areas );
 ?>
 <section <?php echo get_block_wrapper_attributes( array( 'class' => 'dp-areas-section' ) ); ?>>
 	<div class="dp-section-container">

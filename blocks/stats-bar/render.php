@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
-$stats = $attributes['stats'] ?? array(
+$stats = get_field( 'stats' ) ?: $attributes['stats'] ?? array(
 	array( 'number' => '10+', 'label' => 'Years Experience' ),
 	array( 'number' => '500+', 'label' => 'Projects Completed' ),
 	array( 'number' => '100%', 'label' => 'Client Satisfaction' ),
